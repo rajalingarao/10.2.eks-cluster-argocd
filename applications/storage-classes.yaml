@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/rajalingarao/10.5.expense-eks-cluster-argocd.git
+    repoURL: https://github.com/rajalingarao/10.2.eks-cluster-argocd.git
     targetRevision: main   # or a tag/commit hash
     path: sc        # folder in repo with Kubernetes YAMLs
   destination:
