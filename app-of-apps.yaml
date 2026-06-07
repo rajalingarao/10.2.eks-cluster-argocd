@@ -9,16 +9,16 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/rajalingarao/10.5.expense-eks-cluster-argocd.git
+    repoURL: https://github.com/rajalingarao/10.2.eks-cluster-argocd.git
     targetRevision: main   # or a tag/commit hash
     path: applications        # folder in repo with Kubernetes YAMLs
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
-    automated:
-      prune: true           # delete resources not in Git
-      selfHeal: true        # revert out-of-band changes
+    # automated:
+    #   prune: true           # delete resources not in Git
+    #   selfHeal: true        # revert out-of-band changes
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
