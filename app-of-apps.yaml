@@ -16,9 +16,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
-    # automated:
-    #   prune: true           # delete resources not in Git
-    #   selfHeal: true        # revert out-of-band changes
+    automated:
+      prune: true           # delete resources not in Git
+      selfHeal: true        # revert out-of-band changes
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
